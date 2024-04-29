@@ -7,24 +7,41 @@ import api from '../services/api';
 interface User {
   id: number;
   name: string;
+  city: string;
 }
-
+// Choese a random name to change the user name
+const randomName = () => {
+  const names = ['Bartolomeu', 'João', 'Maria', 'José', 'Pedro', 'Paulo', 'Lucas', 'Mateus', 'Marcos', 'Judas', 'Simão', 'André', 'Tiago', 'Tadeu', 'Tomé', 'Filipe', 'Bartolomeu', 'Matias', 'Levi', 'Matias', 'Judas', 'Judas Iscariotes',
+  ];
+  return names[Math.floor(Math.random() * names.length)];
+}
 const UserList: React.FC = () => {
   const { data, mutate } = useFetch<User[]>('users');
 
   const handleNameChange = useCallback((id: number) => {
-    api.put(`users/${id}`, { name: 'Bartolomeu' });
-
+    const name = randomName();
+    api.patch(`users/${id}`, { name: name });
+    
     const updatedUsers = data?.map(user => {
-      if (user.id === id) {
-        return { ...user, name: 'Bartolomeu' }
+      console.log(user);
+      
+     if (user.id === id) {
+        return {
+          ...user,
+          name: name ,
+          city: user.city
+        };
       }
 
       return user;
     })
 
+    //atualiza a lista no cache
     mutate(updatedUsers, false)
-    mutateGlobal(`users/${id}`, { id, name: 'Bartolomeu' })
+    //atualiza os detalhes do usuário no cache
+    const city = data?.find(user => user.id === id)?.city;
+    mutateGlobal(`users/${id}`, { id, name: name, city})
+    //mutateGlobal(`users/${id}`, { id, name: name, })
   }, [data, mutate]);
 
   if (!data) {

@@ -1,40 +1,49 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Diego"
+      "name": "Judas Iscariotes",
+      "id": "1",
+      "city": "São Paulo"
     },
     {
-      "id": 2,
-      "name": "Dani"
+      "name": "Judas",
+      "id": "2",
+      "city": "São Paulo"
     },
     {
-      "name": "Bartolomeu",
-      "id": 3
+      "name": "André",
+      "id": "3",
+      "city": "São Paulo"
     },
     {
-      "id": 4,
-      "name": "Mary"
+      "name": "Matias",
+      "id": "4",
+      "city": "São Paulo"
     },
     {
-      "id": 5,
-      "name": "Joseph"
-    },
-    {
-      "name": "Bartolomeu",
-      "id": 6
-    },
-    {
-      "name": "Bartolomeu",
-      "id": 7
+      "name": "Maria",
+      "id": "5",
+      "city": "São Paulo"
     },
     {
       "name": "Bartolomeu",
-      "id": 8
+      "id": "6",
+      "city": "São Paulo"
     },
     {
-      "name": "Bartolomeu",
-      "id": 9
+      "name": "Tiago",
+      "id": "7",
+      "city": "São Paulo"
+    },
+    {
+      "name": "Judas Iscariotes",
+      "id": "8",
+      "city": "São Paulo"
+    },
+    {
+      "name": "Judas Iscariotes",
+      "id": "9",
+      "city": "São Paulo"
     }
   ]
 }
