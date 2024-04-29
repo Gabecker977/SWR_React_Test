@@ -10,13 +10,12 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
-    "axios": "^0.19.2",
+    "axios": "^1.6.8",
     "history": "^5.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^6.0.0-beta.0",
-    "react-scripts": "3.4.1",
-    "swr": "^0.2.3",
+    "react-scripts": "^5.0.1",
     "typescript": "~3.7.2"
   },
   "scripts": {
@@ -42,6 +41,7 @@
     ]
   },
   "devDependencies": {
-    "json-server": "^0.16.1"
+    "json-server": "^1.0.0-alpha.23",
+    "swr": "^2.2.5"
   }
 }
